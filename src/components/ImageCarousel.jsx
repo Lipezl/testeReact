@@ -14,7 +14,7 @@ export default function ImageCarousel() {
         loop={true}
         className="swiper"
       >
-        {[2, 1, 3, 4, 5, 6, 7, 8].map((i) => (
+        {[1, 3, 2, 4, 5, 6, 7].map((i) => (
           <SwiperSlide key={i}>
             <img src={`/foto${i}.jpg`} alt={`Foto ${i}`} className="swiper-slide" />
           </SwiperSlide>
