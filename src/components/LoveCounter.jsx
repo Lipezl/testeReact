@@ -11,7 +11,7 @@ export default function LoveCounter() {
 
       {/* Carrossel de Imagens */}
       <div className="containerTeste">
-        <h2>Melhores fotinhas de Abril</h2>
+        <h2>Melhores fotinhas de maio/junho</h2>
         <ImageCarousel />
       </div>
 
