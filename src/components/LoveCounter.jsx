@@ -1,18 +1,17 @@
 import Header from "./Header";
-import ImageCarousel from "./ImageCarousel";
+import { ImageCarouselMaioJunho, ImageCarouselAbril, ImageCarouselMarco, ImageCarouselJulho } from "./ImageCarousel";
 import TimeCounter from "./TimeCounter";
-import LoveLetter from "./LoveLetter";
+import { LoveLetterMaioJunho, LoveLetterMarco, LoveLetterAbril, LoveLetterJulho } from "./LoveLetter";
 import PolaroidImage from "./PolaroidImage";
 
-export default function LoveCounter() {
+export function LoveCounterJulho() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-pink-100">
       <Header />
-
       {/* Carrossel de Imagens */}
       <div className="containerTeste">
-        <h2>Melhores fotinhas de maio/junho</h2>
-        <ImageCarousel />
+        <h2>Melhores fotinhas de Julho</h2>
+        <ImageCarouselJulho />
       </div>
 
       {/* Caixa de Informações */}
@@ -21,7 +20,81 @@ export default function LoveCounter() {
         <TimeCounter />
 
         {/* Texto à esquerda */}
-        <LoveLetter />
+        <LoveLetterJulho />
+
+        {/* Imagem à direita */}
+        <PolaroidImage />
+      </div>
+    </div>
+  );
+}
+
+export function LoveCounterMaioJunho() {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-pink-100">
+      <Header />
+      {/* Carrossel de Imagens */}
+      <div className="containerTeste">
+        <h2>Melhores fotinhas de maio/junho</h2>
+        <ImageCarouselMaioJunho />
+      </div>
+
+      {/* Caixa de Informações */}
+      <div className="container">
+        <h1 className="text-3xl font-bold mb-4">Estamos juntos há:</h1>
+        <TimeCounter />
+
+        {/* Texto à esquerda */}
+        <LoveLetterMaioJunho />
+
+        {/* Imagem à direita */}
+        <PolaroidImage />
+      </div>
+    </div>
+  );
+}
+export function LoveCounterAbril() {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-pink-100">
+      <Header />
+      {/* Carrossel de Imagens */}
+      <div className="containerTeste">
+        <h2>Melhores fotinhas de Abril</h2>
+        <ImageCarouselAbril />
+      </div>
+
+      {/* Caixa de Informações */}
+      <div className="container">
+        <h1 className="text-3xl font-bold mb-4">Estamos juntos há:</h1>
+        <TimeCounter />
+
+        {/* Texto à esquerda */}
+        <LoveLetterAbril />
+
+        {/* Imagem à direita */}
+        <PolaroidImage />
+      </div>
+    </div>
+  );
+}
+export function LoveCounterMarco() {
+  
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-pink-100">
+      <Header />
+      {/* Carrossel de Imagens */}
+      <div className="containerTeste">
+        <h2>Melhores fotinhas de Março</h2>
+        <ImageCarouselMarco />
+      </div>
+
+      {/* Caixa de Informações */}
+      <div className="container">
+        <h1 className="text-3xl font-bold mb-4">Estamos juntos há:</h1>
+        <TimeCounter />
+
+        {/* Texto à esquerda */}
+        <LoveLetterMarco />
 
         {/* Imagem à direita */}
         <PolaroidImage />
