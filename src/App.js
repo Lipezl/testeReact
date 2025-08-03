@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { LoveCounterMaioJunho, LoveCounterAbril, LoveCounterMarco, LoveCounterJulho } from './components/LoveCounter';
 
 function App() {
-  // Inicializa o estado com o mês "Maio/Junho"
+  // Inicializa o estado com o mês "Julho"
   const [mesSelecionado, setMesSelecionado] = useState({ 
     nome: "Julho", 
     componente: <LoveCounterJulho /> 
@@ -16,20 +16,22 @@ function App() {
   ];
 
   return (
-    <div className="App min-h-screen bg-pink-50">
+    <div className="App min-h-screen bg-gradient-to-br from-pink-50 to-purple-50 overflow-hidden">
       {/* Header */}
-      <header className="bg-pink-500 p-4 shadow-md">
-        <h1 className="text-2xl font-bold text-center text-white">Nosso Livro de Amor</h1>
+      <header className="bg-gradient-to-r from-pink-500 to-purple-600 p-6 shadow-lg">
+        <h1 className="text-3xl font-bold text-center text-white font-serif">
+          Nosso Livro de Amor
+        </h1>
       </header>
 
       {/* Menu de meses */}
       <div className="container mx-auto p-4">
-        <div className="flex flex-wrap justify-center gap-4 my-8">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4 my-8">
           {meses.map((mes) => (
             <button
               key={mes.nome}
               onClick={() => setMesSelecionado(mes)}
-              className={`px-6 py-3 rounded-full font-bold shadow-lg transition-all duration-300 ${
+              className={`w-full sm:w-auto px-6 py-3 rounded-full font-bold shadow-lg transition-all duration-300 ${
                 mesSelecionado?.nome === mes.nome
                   ? 'bg-gradient-to-r from-pink-500 to-pink-600 text-white transform scale-105'
                   : 'bg-white text-pink-600 hover:bg-pink-100'
@@ -46,7 +48,7 @@ function App() {
             {mesSelecionado.componente}
             <button
               onClick={() => setMesSelecionado(null)}
-              className="mx-auto mt-6 block px-4 py-2 bg-pink-100 hover:bg-pink-200 text-pink-600 rounded-full shadow transition"
+              className="mx-auto mt-6 block w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-pink-400 to-purple-400 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
             >
               ← Voltar para todos os meses
             </button>
