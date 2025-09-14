@@ -1,5 +1,57 @@
 import { useState } from "react";
 
+export function LoveLetterAgosto() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="flex flex-col items-center mt-6">
+      {/* Botão */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="bg-white text-pink-600 font-semibold border border-pink-300 px-6 py-2 rounded-full shadow-md hover:bg-pink-100 transition duration-300 ease-in-out botao"
+      >
+        💌 {open ? "Fechar cartinha" : "Abrir cartinha"}
+      </button>
+
+      {/* Cartinha */}
+      {open && (
+        <div className="mt-8 max-w-2xl bg-white border border-pink-200 rounded-2xl shadow-xl p-8 font-serif text-gray-800 transition-all duration-500 animate-fade-in carta">
+          <h2 className="text-2xl font-bold text-center text-pink-500 mb-6">
+            Para o amor da minha vida, <br />
+            <span className="text-pink-400">
+              minha gatinha, princesa e perfeita ❤️
+            </span>
+          </h2>
+          <p className="text-lg italic leading-relaxed">
+            Já são 7 meses juntos, e posso dizer que cada dia da mais vontade de estar ao seu lado, você é a mulher da minha vida, quero viver o resto da minha vida ao seu lado, e confesso que depois de ter ido no casamento, eu fiquei com mais vontade ainda de casar com você. Você é incrivel, perfeita, linda, maravilhosa e a melhor namorada que eu poderia ter, eu fico admirando quando você canta, e toca teclado, você é muito talentosa. Eu te amo mais do que tudo nesse mundo, sempre vou te amar, você é a mulher da minha vida e sempre será! 💖
+          </p>
+          <p className="mt-6 text-center text-lg font-semibold text-pink-500">
+            💖 Para sempre juntos! 💖
+          </p>
+        </div>
+      )}
+
+      {/* Estilo de animação fade-in */}
+      <style jsx>{`
+        .animate-fade-in {
+          animation: fadeIn 0.6s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
+
 export function LoveLetterJulho() {
   const [open, setOpen] = useState(false);
 
