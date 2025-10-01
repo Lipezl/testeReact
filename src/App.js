@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { LoveCounterMaioJunho, LoveCounterAbril, LoveCounterMarco, LoveCounterJulho, LoveCounterAgosto, LoveCounterSetembro } from './components/LoveCounter';
 
 function App() {
-  // Inicializa o estado com o mês "Julho"
   const [mesSelecionado, setMesSelecionado] = useState({ 
     nome: "Setembro", 
     componente: <LoveCounterSetembro /> 
