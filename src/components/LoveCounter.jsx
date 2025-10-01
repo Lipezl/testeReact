@@ -1,8 +1,33 @@
 import Header from "./Header";
-import { ImageCarouselMaioJunho, ImageCarouselAbril, ImageCarouselMarco, ImageCarouselJulho, ImageCarouselAgosto } from "./ImageCarousel";
+import { ImageCarouselMaioJunho, ImageCarouselAbril, ImageCarouselMarco, ImageCarouselJulho, ImageCarouselAgosto, ImageCarouselSetembro } from "./ImageCarousel";
 import TimeCounter from "./TimeCounter";
-import { LoveLetterMaioJunho, LoveLetterMarco, LoveLetterAbril, LoveLetterJulho, LoveLetterAgosto } from "./LoveLetter";
+import { LoveLetterMaioJunho, LoveLetterMarco, LoveLetterAbril, LoveLetterJulho, LoveLetterAgosto, LoveLetterSetembro } from "./LoveLetter";
 import PolaroidImage from "./PolaroidImage";
+
+export function LoveCounterSetembro() {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-pink-100">
+      <Header />
+      {/* Carrossel de Imagens */}
+      <div className="containerTeste">
+        <h2>Melhores fotinhas de Setembro</h2>
+        <ImageCarouselSetembro />
+      </div>
+
+      {/* Caixa de Informações */}
+      <div className="container">
+        <h1 className="text-3xl font-bold mb-4">Estamos juntos há:</h1>
+        <TimeCounter />
+
+        {/* Texto à esquerda */}
+        <LoveLetterSetembro />
+
+        {/* Imagem à direita */}
+        <PolaroidImage />
+      </div>
+    </div>
+  );
+}
 
 export function LoveCounterAgosto() {
   return (
