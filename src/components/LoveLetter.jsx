@@ -1,5 +1,58 @@
 import { useState } from "react";
 
+
+
+export function LoveLetterOutubro() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="flex flex-col items-center mt-6">
+      {/* Botão */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="bg-white text-pink-600 font-semibold border border-pink-300 px-6 py-2 rounded-full shadow-md hover:bg-pink-100 transition duration-300 ease-in-out botao"
+      >
+        💌 {open ? "Fechar cartinha" : "Abrir cartinha"}
+      </button>
+
+      {/* Cartinha */}
+      {open && (
+        <div className="mt-8 max-w-2xl bg-white border border-pink-200 rounded-2xl shadow-xl p-8 font-serif text-gray-800 transition-all duration-500 animate-fade-in carta">
+          <h2 className="text-2xl font-bold text-center text-pink-500 mb-6">
+            Para o amor da minha vida, <br />
+            <span className="text-pink-400">
+              minha gatinha, princesa e perfeita ❤️
+            </span>
+          </h2>
+          <p className="text-lg italic leading-relaxed">
+            Amor, já fazem 9 meses que estamos juntos, mas o que eu sinto por você é desde a primeira vez que eu te vi, foi amor a primeira vista, eu lembro até hoje você passando no meu lado no começo do ano passado (COMO ASSIM VC NÃO LEMBRA? 🙄🙄). E quando jogamos truco pela primeira vez, eu tive mais certeza ainda, lembro cada passo daquele dia, eu te dando tchau na saída e tudo, meu coração batia muito rápido, sempre quando estou com você ele acelera, de tanto amor que sinto por você. Eu te amo infinitamente, amor da minha vida, minha princesa, você é tudinho para mim, e prometo que sempre estarei juntinho com você, mal espero o dia de casar com você chegar logo. Eu te amo mais do que tudo nesse mundo, e sempre vou te amar, você é a mulher da minha vida e sempre será! ❤️💘💝
+          </p>
+          <p className="mt-6 text-center text-lg font-semibold text-pink-500">
+            💖 Para sempre juntos! 💖
+          </p>
+        </div>
+      )}
+
+      {/* Estilo de animação fade-in */}
+      <style jsx>{`
+        .animate-fade-in {
+          animation: fadeIn 0.6s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
 export function LoveLetterSetembro() {
   const [open, setOpen] = useState(false);
 

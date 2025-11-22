@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { LoveCounterMaioJunho, LoveCounterAbril, LoveCounterMarco, LoveCounterJulho, LoveCounterAgosto, LoveCounterSetembro } from './components/LoveCounter';
+import { LoveCounterMaioJunho, LoveCounterAbril, LoveCounterMarco, LoveCounterJulho, LoveCounterAgosto, LoveCounterSetembro, LoveCounterOutubro } from './components/LoveCounter';
 
 function App() {
   const [mesSelecionado, setMesSelecionado] = useState({ 
     nome: "Setembro", 
-    componente: <LoveCounterSetembro /> 
+    componente: <LoveCounterOutubro /> 
   });
 
   const meses = [
@@ -13,7 +13,8 @@ function App() {
     { nome: "Maio/Junho", componente: <LoveCounterMaioJunho /> },
     { nome: "Julho", componente: <LoveCounterJulho /> },
     { nome: "Agosto", componente: <LoveCounterAgosto /> },
-    { nome: "Setembro", componente: <LoveCounterSetembro /> }
+    { nome: "Setembro", componente: <LoveCounterSetembro /> },
+    { nome: "Outubro", componente: <LoveCounterOutubro /> }
   ];
 
   return (

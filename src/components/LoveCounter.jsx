@@ -1,9 +1,33 @@
 import Header from "./Header";
-import { ImageCarouselMaioJunho, ImageCarouselAbril, ImageCarouselMarco, ImageCarouselJulho, ImageCarouselAgosto, ImageCarouselSetembro } from "./ImageCarousel";
+import { ImageCarouselMaioJunho, ImageCarouselAbril, ImageCarouselMarco, ImageCarouselJulho, ImageCarouselAgosto, ImageCarouselSetembro, ImageCarouselOutubro } from "./ImageCarousel";
 import TimeCounter from "./TimeCounter";
-import { LoveLetterMaioJunho, LoveLetterMarco, LoveLetterAbril, LoveLetterJulho, LoveLetterAgosto, LoveLetterSetembro } from "./LoveLetter";
+import { LoveLetterMaioJunho, LoveLetterMarco, LoveLetterAbril, LoveLetterJulho, LoveLetterAgosto, LoveLetterSetembro, LoveLetterOutubro } from "./LoveLetter";
 import PolaroidImage from "./PolaroidImage";
 
+export function LoveCounterOutubro() {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-pink-100">
+      <Header />
+      {/* Carrossel de Imagens */}
+      <div className="containerTeste">
+        <h2>Melhores fotinhas de Outubro</h2>
+        <ImageCarouselOutubro />
+      </div>
+
+      {/* Caixa de Informações */}
+      <div className="container">
+        <h1 className="text-3xl font-bold mb-4">Estamos juntos há:</h1>
+        <TimeCounter />
+
+        {/* Texto à esquerda */}
+        <LoveLetterOutubro />
+
+        {/* Imagem à direita */}
+        <PolaroidImage />
+      </div>
+    </div>
+  );
+}
 export function LoveCounterSetembro() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-pink-100">
