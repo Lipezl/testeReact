@@ -6,7 +6,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(158,15,44,1) 100%);
   overflow-x: hidden; /* Bloqueia a rolagem lateral */
-  width: 100vw;
 }
 
 /* Header */
