@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 export default function TimeCounter() {
   const startDate = new Date("2025-01-30T00:00:00");
@@ -36,7 +36,7 @@ export default function TimeCounter() {
       setTimeTogether(getTimeTogether());
     }, 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, [getTimeTogether]);
 
   return (
     <p className="text-xl contador">
