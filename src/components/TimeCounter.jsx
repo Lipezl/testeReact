@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback } from "react";
 
-export default function TimeCounter() {
-  const startDate = new Date("2025-01-30T00:00:00");
-  const [timeTogether, setTimeTogether] = useState(getTimeTogether());
+const startDate = new Date("2025-01-30T00:00:00");
 
-  function getTimeTogether() {
+export default function TimeCounter() {
+
+  const getTimeTogether = useCallback(() => {
     const now = new Date();
     let years = now.getFullYear() - startDate.getFullYear();
     let months = now.getMonth() - startDate.getMonth();
@@ -29,7 +29,9 @@ export default function TimeCounter() {
       minutes: now.getMinutes(),
       seconds: now.getSeconds(),
     };
-  }
+  }, []);
+
+  const [timeTogether, setTimeTogether] = useState(getTimeTogether());
 
   useEffect(() => {
     const interval = setInterval(() => {
