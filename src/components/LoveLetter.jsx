@@ -2,6 +2,111 @@ import { useState } from "react";
 
 
 
+export function LoveLetterJaneiro1() { 
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="flex flex-col items-center mt-6">
+      {/* Botão */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="bg-white text-pink-600 font-semibold border border-pink-300 px-6 py-2 rounded-full shadow-md hover:bg-pink-100 transition duration-300 ease-in-out botao"
+      >
+        💌 {open ? "Fechar cartinha" : "Abrir cartinha"}
+      </button>
+
+      {/* Cartinha */}
+      {open && (
+        <div className="mt-8 max-w-2xl bg-white border border-pink-200 rounded-2xl shadow-xl p-8 font-serif text-gray-800 transition-all duration-500 animate-fade-in carta">
+          <h2 className="text-2xl font-bold text-center text-pink-500 mb-6">
+            Para o amor da minha vida, <br />
+            <span className="text-pink-400">
+              minha gatinha, fofinha, maravilhosa, princesa, perfeita e tudinho para mimmmmmm ❤️
+            </span>
+          </h2> 
+          <p className="text-lg italic leading-relaxed">
+            Amorrr, chegou o grande diaaa, o nosso primeiro ano juntos, eu lembro exatamente o dia que eu te pedi em namoro, e foi o melhor dia da minha vida, e agora todos os melhores dias da minha vida você está comigo, passamos por muitos momentos incríveis, eu consigo lembrar todos os nossos dates e cada mês que passava eu ficava mais ansioso para estar cada vez mais perto de você, e agora já fazem 12 meses que estamos juntos, e eu tenho certeza que ainda é o início de tudo, que ainda tem muito mais momentos perfeitos para vivermos juntos, e eu mal posso esperar para viver cada um deles, e para construir uma vida ao seu lado. Obrigado por ser a namorada perfeita que você é, e por me fazer feliz todos os dias, Eu te amo muito muito muito muito mais que infinitamenteeeeee, minha gatinha, minha princesa, minha mulher da minha vida, minha tudo, e sempre vou te amar, com a maior intensidade de todo o meu coração!!!!!!! 💘💝❤️✨💕
+          </p>
+          <p className="mt-6 text-center text-lg font-semibold text-pink-500">
+            💖 Para sempre juntos! 💖
+          </p>
+        </div>
+      )}
+
+      {/* Estilo de animação fade-in */}
+      <style jsx>{`
+        .animate-fade-in {
+          animation: fadeIn 0.6s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
+
+export function LoveLetterNovembroDezembro() { //Fazer ainda
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="flex flex-col items-center mt-6">
+      {/* Botão */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="bg-white text-pink-600 font-semibold border border-pink-300 px-6 py-2 rounded-full shadow-md hover:bg-pink-100 transition duration-300 ease-in-out botao"
+      >
+        💌 {open ? "Fechar cartinha" : "Abrir cartinha"}
+      </button>
+
+      {/* Cartinha */}
+      {open && (
+        <div className="mt-8 max-w-2xl bg-white border border-pink-200 rounded-2xl shadow-xl p-8 font-serif text-gray-800 transition-all duration-500 animate-fade-in carta">
+          <h2 className="text-2xl font-bold text-center text-pink-500 mb-6">
+            Para o amor da minha vida, <br />
+            <span className="text-pink-400">
+              minha gatinha, fofinha, maravilhosa, princesa e perfeita ❤️
+            </span>
+          </h2> 
+          <p className="text-lg italic leading-relaxed">
+            Oiiiiiiiiiiiiiiiiii, amor da minha vida!!! Esses meses que passaram foram incríveis, e eu tenho certeza que cada vez mais, vai ser mais incrível ainda, eu te amo mais que tudo nesse mundo, e sempre vou te amar, você é a mulher da minha vida e sempre será! Eu fico tão ansioso para o nosso futuro juntos, para a nossa família linda, na nossa casa linda. Eu te amo infinitamente, amor da minha vida, você é tudinho para mim! 💘💝
+          </p>
+          <p className="mt-6 text-center text-lg font-semibold text-pink-500">
+            💖 Para sempre juntos! 💖
+          </p>
+        </div>
+      )}
+
+      {/* Estilo de animação fade-in */}
+      <style jsx>{`
+        .animate-fade-in {
+          animation: fadeIn 0.6s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
+
+
 export function LoveLetterOutubro() {
   const [open, setOpen] = useState(false);
 
@@ -23,7 +128,7 @@ export function LoveLetterOutubro() {
             <span className="text-pink-400">
               minha gatinha, princesa e perfeita ❤️
             </span>
-          </h2>
+          </h2> 
           <p className="text-lg italic leading-relaxed">
             Amor, já fazem 9 meses que estamos juntos, mas o que eu sinto por você é desde a primeira vez que eu te vi, foi amor a primeira vista, eu lembro até hoje você passando no meu lado no começo do ano passado (COMO ASSIM VC NÃO LEMBRA? 🙄🙄). E quando jogamos truco pela primeira vez, eu tive mais certeza ainda, lembro cada passo daquele dia, eu te dando tchau na saída e tudo, meu coração batia muito rápido, sempre quando estou com você ele acelera, de tanto amor que sinto por você. Eu te amo infinitamente, amor da minha vida, minha princesa, você é tudinho para mim, e prometo que sempre estarei juntinho com você, mal espero o dia de casar com você chegar logo. Eu te amo mais do que tudo nesse mundo, e sempre vou te amar, você é a mulher da minha vida e sempre será! ❤️💘💝
           </p>
